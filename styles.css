@@ -1,1 +1,71 @@
 /*  your css code here. If applicable */
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	height: 100vh;
+	background-color: #f6f7fb;
+}
+
+.circle-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
+}
+
+.circle-wrapper {
+	width: 20%;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.circle {
+	background-color: white;
+	border-radius: 50%;
+	border: 3px solid #e0e0e0;
+	height: 28px;
+	width: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.circle.active {
+	border: 3px solid #3498db;
+}
+
+.circle.active + .line {
+	background-color: #3498db;
+}
+
+.line {
+	height: 4px;
+	width: 100%;
+	background-color: #e0e0e0;
+	position: absolute;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+#prev, #next {
+	background-color: #3498db;
+	border: none;
+	padding: 10px 28px;
+	border-radius: 10px;
+	color: white;
+}
+
+#prev:disabled, #next:disabled {
+	background-color: gray;
+}
+
